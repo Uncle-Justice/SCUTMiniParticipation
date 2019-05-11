@@ -1,0 +1,273 @@
+/* pages/lauch_act/lauch_act.wxss */
+
+.background {
+  background-color: #f2f2f2;
+  background-size: 100% 100%;
+}
+.cover-container {
+  margin: 10rpx auto;
+  width: 730rpx;
+  position: relative;
+}
+
+.cover-container-image image{
+  width: 730rpx;
+}
+.cover-container-button{
+  top:2%;
+  right: 0%;
+  position: absolute;
+}
+.cover-container-button-1 {
+
+  width: 232rpx;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: bold;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.textarea{
+ background-color:#fff;
+} 
+
+.special-container{
+  width: 700rpx;
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: #fff;
+  border-radius: 25rpx;
+
+}
+
+.special-title{
+  padding: 0 0 0 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.special-content{
+  margin: 4rpx 0 0 20rpx;
+  width:650rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fixed-view{
+  width: 700rpx;
+  height: 200rpx;
+  overflow-y: scroll;
+  /* 超出父盒子高度可滚动 */
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: #fff;
+  border-radius: 25rpx;
+}
+.fixed-view-speical{
+  width: 700rpx;
+  height: 100%;
+
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: #fff;
+  border-radius: 25rpx;
+  
+}
+
+.fixed-view view {
+  margin-left: 20rpx;
+}
+
+.fixed-view textarea {
+  width: 640rpx;
+  height: 120rpx;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+.fixed-view-upload{
+   width: 700rpx;
+  /* height: 100rpx; */
+ 
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 25rpx;
+}
+
+.btn-area{
+  margin-top: 30rpx;
+}
+
+
+
+.btn-area button{
+  margin-top: 5rpx;
+  width: 700rpx;
+  border-radius: 60rpx;
+  color: #fff;
+  background-color: #e9bb1d;
+}
+
+.btn-1 button{
+  color: #fff;
+  background-color:  #7bcfa6;
+}
+
+
+.deadline-container {
+  width: 700rpx;
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  background-color: #fff;
+  border-radius: 25rpx;
+  text-align:text-align;
+  font-size: 130%;
+}
+
+
+/* .deadline-container view{
+  sfafsaasfasfasfasf
+/* }  */
+
+.deadline-title {
+  margin-left: 10rpx;
+}
+
+.section {
+  margin-left: 20rpx;
+}
+
+.required_options-container {
+  width: 700rpx;
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: #fff;
+  border-radius: 25rpx;
+  font-size: 120%;
+}
+
+.required_options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.notclicked {
+  /* width:100%; */
+  margin-left: 10rpx;
+  color: rgb(78, 78, 78);
+  display: table;
+  flex-direction: row;
+  background-color: #fff;
+  border: solid;
+  border-width: 2rpx;
+  border-radius: 60rpx;
+  border-color: rgb(58, 57, 57);
+  margin-bottom: 10rpx;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  font-size: 100%;
+}
+
+.clicked {
+  /* width:50rpx; */
+  margin-left: 10rpx;
+  color: rgb(230, 39, 39);
+  display: table;
+  flex-direction: row;
+  background-color: #fff;
+  border: solid;
+  border-color: rgb(230, 39, 39);
+  border-width: 2rpx;
+  margin-bottom: 10rpx;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  border-radius: 60rpx;
+  font-size: 100%;
+}
+
+/* .picker {
+  background-color: #fff;
+  border-radius: 25rpx;
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  /* width: 700rpx; */
+/* } */ 
+
+.userinfo {
+  /* background-color: #534213; */
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+}
+
+.imginfo {
+  margin-top: 5rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   /* background-color: #534213; */
+   width:100%;
+   height: 100%;
+   
+}
+.imginfo button{
+ position:absolute; 
+/* left:580rpx; */
+margin-right: 0rpx;
+top:100rpx; 
+text-align:right;
+ border: 0rpx;
+
+
+color: rgb(255,0,0);
+font-size: 30rpx;
+
+
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

@@ -1,0 +1,36 @@
+var sub = function(val) {
+  if (val.length == 0 || val == undefined) {
+    return;
+  }
+  if (val.length > 17) {
+    return val.substring(0, 17) + "...";
+  } else {
+    return val;
+  }
+}
+
+var sub2 = function (val) {
+  if (val.length == 0 || val == undefined) {
+    return;
+  }
+  if (val.length > 41) {
+    return val.substring(0, 41) + "...";
+  } else {
+    return val;
+  }
+}
+
+var sub3 = function (val,num) {
+  if (val.length == 0 || val == undefined) {
+    return;
+  }
+  if (val.length > num) {
+    return val.substring(0, num) + "...";
+  } else {
+    return val;
+  }
+}
+
+module.exports.sub = sub;
+module.exports.sub2 = sub2;
+module.exports.sub3 = sub3;

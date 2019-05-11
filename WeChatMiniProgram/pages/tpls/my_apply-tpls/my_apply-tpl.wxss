@@ -1,0 +1,139 @@
+.post-container {
+  display: flex;
+  flex-direction: column;
+  width: 700rpx;
+  margin: 10rpx auto;
+  border-radius: 30rpx;
+  background-color: #fff;
+  /* border-top: 2px solid #ededed; *//* border-bottom: 2px solid #ededed; *//* padding-bottom: 10rpx; *//* margin-bottom:0rpx; */
+}
+
+.post-pattern {
+  display: flex;
+  flex-direction: row;
+}
+
+.post-image {
+  border-radius: 10rpx;
+  /* margin-top:15rpx; */
+  margin-left: 15rpx;
+  width: 300rpx;
+  height: 180rpx;
+  /* margin-bottom: 15px; */
+}
+
+.post-pattern-right {
+  /* margin-top:15rpx; */
+  margin-left: 10px;
+  width: 350rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.post-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  /* margin-bottom: 10px; */
+  color: #333;
+}
+
+.post-update {
+  /* vertical-align:middle; */
+  margin-top: 5rpx;
+  font-size: 24rpx;
+  color: #ff6ec7;
+}
+
+.user-status-in_review {
+  position: relative;
+}
+
+.user-status-in_review text {
+  background-color: #c2ccd0;
+  width: 100rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  color: #fff;
+  font-family: Microsoft Yahei;
+  border-radius: 10rpx;
+}
+
+.user-status-enrolled {
+  position: relative;
+}
+
+.user-status-enrolled text {
+  background-color: #3de1ad;
+  width: 100rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  color: #fff;
+  font-family: Microsoft Yahei;
+  border-radius: 10rpx;
+}
+
+.user-status-unenrolled {
+  position: relative;
+}
+
+.user-status-unenrolled text {
+  background-color: #ff4777;
+  width: 100rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  color: #fff;
+  font-family: Microsoft Yahei;
+  border-radius: 10rpx;
+}
+
+.modify-container {
+  display: flex;
+  flex-direction: row;
+
+  width: 200rpx;
+  height: 50rpx;
+  margin-left:auto;
+  /* margin-left:auto; */
+  /* text-align: right; */
+}
+
+.modify-container text {
+  margin-top:5rpx;
+  width:135rpx;
+  font-size:29rpx;
+  font-family: Microsoft Yahei;
+  color: #333;
+}
+.modify-container image{
+  width:50rpx;
+  height:50rpx;
+}
+
+/* .post-content {
+  /* margin-top:10rpx; */
+
+/* font-size: 22rpx;
+  color: #666;
+  letter-spacing: 2rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+} */
+
+/* .post-like {
+  font-size: 20rpx;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.post-like-image {
+  height: 24rpx;
+  width: 24rpx;
+  margin-left: 16rpx;
+}
+
+.post-like-font {
+  margin-right: 40rpx;
+} */

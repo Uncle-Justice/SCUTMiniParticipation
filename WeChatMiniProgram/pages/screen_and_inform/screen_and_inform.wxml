@@ -1,0 +1,17 @@
+<import src="../tpls/post-tpls/post-tpl.wxml" />
+
+<view class="post-main-container">
+  <view class="post-head_img">
+  <text>请选择您要管理的活动</text>
+  </view>
+
+  <view >
+
+    <block wx:key='' wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="idx">
+      <view class="post-container" catchtap="onPostTap" data-questionnaire="{{item.questionnaire}}" data-closed="{{item.questionnaire.closed}}">
+        <template is="post-tpl" data="{{...item}}"/>
+      </view>
+    </block>
+
+  </view>
+</view>

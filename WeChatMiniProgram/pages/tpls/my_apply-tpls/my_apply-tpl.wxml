@@ -1,0 +1,56 @@
+<wxs src="../../../wxs/subutil.wxs" module="tools" />
+
+<template name='my_apply-tpl'>
+
+  <view class='post-container'>
+
+    <!-- <view class='post-author-date'>
+        <image class="post-author" src="{{avatar}}" width="100%" mode='widthFix'></image>
+
+      </view> -->
+
+    <view class="post-pattern">
+      <image class='post-image' src="{{questionnaire.image}}" mode='aspectFill'></image>
+      <view class="post-pattern-right">
+        <text class='post-title'>{{tools.sub3(questionnaire.name,11)}}</text>
+        <text wx:if="{{status=='审核中'}}" class='post-update'>可修改</text>
+
+        <view wx:if="{{status=='审核中'}}" class="user-status-in_review">
+          <text>审核中</text>
+        </view>
+        <view wx:if="{{status=='已录取'}}" class="user-status-enrolled">
+          <text>已录取</text>
+        </view>
+        <view wx:if="{{status=='未录取'}}" class="user-status-unenrolled">
+          <text>未录取</text>
+        </view>
+
+        <view class="modify-container">
+          
+            <text wx:if="{{status=='审核中'}}">修改问卷</text>
+            <text wx:if="{{status=='已录取'||status=='未录取'}}">查看问卷</text>
+            <image class="modify-arrow" src="/imgs/icon/arrow@right.png"></image>
+          
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+
+</template>
+<!-- <text class='post-content'>{{description}}</text> -->
+<!-- <view class='post-like'>
+          <image class='post-like-image' src=" /imgs/chat.png " width="100% " mode='widthFix'></image>
+          <text class='post-like-font'>{{reading}}</text>
+          <image class='post-like-image' src="/imgs/view.png " width="100% " mode='widthFix'></image>
+          <text class='post-like-font'>{{collection}}</text>
+        </view> -->
+
+
+<!-- <view class='post-like'>
+        <image class='post-like-image' src="/imgs/chat.png " width="100% " mode='widthFix'></image>
+        <text class='post-like-font'>{{reading}}</text>
+        <image class='post-like-image' src="/imgs/view.png " width="100% " mode='widthFix'></image>
+        <text class='post-like-font'>{{collection}}</text>
+      </view> -->

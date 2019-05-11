@@ -1,0 +1,296 @@
+.my-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; *//* justify-content: space-between; *//* padding: rpx 0; */
+  box-sizing: border-box;
+}
+
+.green_background {
+  /* background-color: #40de5a; */
+  background-color: #96ce54;
+  height: 180rpx;
+}
+
+.userinfo {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #f3f9f1;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.fixed-view {
+  top: 140rpx;
+  position: absolute;
+  width: 700rpx;
+  margin-left: 25rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30rpx;
+}
+
+.three-selection-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.three-selection-container view {
+  width: 200rpx;
+  height: 180rpx;
+  margin-top: 20rpx;
+  margin-left: 25rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.three-selection-container view image {
+  width: 100rpx;
+  height: 100rpx;
+  /* margin-left:10rpx; */
+}
+
+.three-selection-container view text {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  font-family: Microsoft YaHei;
+  color: #3d3b4f;
+}
+
+.backgound {
+  height: 1000rpx;
+  background-color: #f2f2f2;
+}
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+/*content*/
+
+.drawer_box {
+  width: 650rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 1001;
+  background: #fafafa;
+  margin: -150px 50rpx 0 50rpx;
+  border-radius: 3px;
+}
+
+.drawer_title {
+  padding: 30rpx;
+  font: 34rpx "microsoft yahei";
+  text-align: center;
+}
+
+.text-high {
+  color: #00e09e;
+  font-weight: bold;
+}
+
+.drawer_content {
+  height: 210px;
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+}
+
+.screen_drawer_content {
+  height: 90px;
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+}
+
+.btn_ok {
+  padding: 10px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #e8e8ea;
+  color: #3cc51f;
+}
+
+.top {
+  padding-top: 8px;
+}
+
+.bottom {
+  padding-bottom: 8px;
+}
+
+.title {
+  height: 30px;
+  line-height: 30px;
+  width: 160rpx;
+  text-align: center;
+  display: inline-block;
+  font: 300 28rpx/30px "microsoft yahei";
+}
+
+.input_base {
+  border: 2rpx solid #ccc;
+  padding-left: 10rpx;
+  margin-right: 50rpx;
+}
+
+.input_h30 {
+  height: 200rpx;
+  line-height: 30px;
+}
+
+.input_h60 {
+  height: 60px;
+}
+
+.input_view {
+  font: 12px "microsoft yahei";
+  background: #fff;
+  color: #000;
+  line-height: 30px;
+}
+
+input {
+  font: 12px "microsoft yahei";
+  background: #fff;
+  color: #000;
+}
+
+radio {
+  margin-right: 20px;
+}
+
+.grid {
+  display: -webkit-box;
+  display: box;
+}
+
+.col-0 {
+  -webkit-box-flex: 0;
+  box-flex: 0;
+}
+
+.col-1 {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.son_view {
+  width: 590rpx;
+  margin-left: 30rpx;
+  border-top: 2px dotted;
+  border-left: 2px dotted;
+  border-right: 2px dotted;
+  border-bottom: 2px dotted;
+  border-color: #00e09e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.partial_view {
+  margin-top: 20rpx;
+  width: 590rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.partial_view view {
+  border-top: 2px dotted;
+  border-left: 2px dotted;
+  border-right: 2px dotted;
+  border-bottom: 2px dotted;
+  border-color: #00e09e;
+}
+
+.screen_view {
+  width: 590rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.multiple-checkboxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+/* 未选中的 背景样式 */
+
+checkbox .wx-checkbox-input {
+  margin-left: 20rpx;
+  border-radius: 50%; /* 圆角 */
+  width: 28rpx; /* 背景的宽 */
+  height: 28rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%;
+  width: 44rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #fff;
+  background: #7fecad;
+  border-color: #7fecad;
+}
+
+.screen_view text {
+  font-size: 32rpx;
+  color: #888;
+}
+
+textarea {
+  width: 550rpx;
+  /* height: 400rpx; */
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+}
+
+.textarea-bg {
+  background-color: #fff;
+  padding: 10rpx;
+  font-size: 32rpx;
+}

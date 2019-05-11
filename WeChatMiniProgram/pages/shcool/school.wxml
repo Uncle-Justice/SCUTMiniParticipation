@@ -1,0 +1,32 @@
+<!-- 功能列表 -->
+<view wx:for="{{list}}" wx:key="{{index}}" class="item">
+  <view data-index="{{index}}" class="inner txt">
+    <image class="item-icon" mode="widthFix" src="{{item.icon}}"></image>
+    <i> {{item.name}}</i>
+    <i>{{item.rank}}</i>
+    <span class="item-data">
+      <i class="rankpace"> {{item.pace}}</i>
+      <i bindtap="powerDrawer" data-statu="open">
+        <image class="item-icon" mode="widthFix" src="../../imgs/time.png"></image>
+      </i>
+    </span>
+  </view>
+</view>
+<!--mask-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+  <!--drawer content-->
+  <view class="drawer_title">发送给全体报名人员</view>
+
+  <view class="drawer_content">
+    <!-- <view class="top grid"> -->
+    <view class='son_view'>
+      <textarea class="textarea-bg" placeholder="请输入内容" bindblur="getDataBindTap" auto-height maxlength='-1' />
+    </view>
+  </view>
+
+  <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>
+</view>

@@ -1,0 +1,48 @@
+<!-- 引入wxs脚本 -->
+<wxs src="../../../wxs/subutil.wxs" module="tools" />
+
+<template name="my_inform-tpl">
+
+  <view wx:if="{{notification1}}" class="inform-container" bindtap='OnInformTap' data-id="{{id}}" data-name="{{activity_name}}" data-notification="{{notification1}}" data-alreadyread="{{already_read1}}" data-updatetime="{{update_time}}" data-alreadyreadnum='already_read1'>
+    <view class="inform-title">
+      <text class="inform-title-1">{{activity_name}}</text>
+      <view class="inform-title-noread" wx:if="{{!already_read1}}">
+        <text>未读</text>
+      </view>
+    </view>
+    <view class="inform-time-container">
+      <text class="inform-time-tile">发布时间：</text>
+      <text class="inform-time-description">{{update_time}}</text>
+    </view>
+    <text class="inform-summarize">{{tools.sub(notification1)}}</text>
+  </view>
+
+  <view wx:if="{{notification2}}" class="inform-container" bindtap='OnInformTap' data-id="{{id}}" data-name="{{activity_name}}" data-notification="{{notification2}}" data-alreadyread="{{already_read2}}" data-updatetime="{{update_time}}" data-alreadyreadnum='already_read2'>
+    <view class="inform-title">
+      <text class="inform-title-2">{{activity_name}}</text>
+      <view class="inform-title-noread" wx:if="{{!already_read2}}">
+        <text>未读</text>
+      </view>
+    </view>
+    <view class="inform-time-container">
+      <text class="inform-time-tile">发布时间：</text>
+      <text class="inform-time-description">{{update_time}}</text>
+    </view>
+    <text class="inform-summarize">{{tools.sub(notification2)}}</text>
+  </view>
+
+  <view wx:if="{{notification3}}" class="inform-container" bindtap='OnInformTap' data-id="{{id}}" data-name="{{activity_name}}" data-notification="{{notification3}}" data-alreadyread="{{already_read3}}" data-updatetime="{{update_time}}" data-alreadyreadnum='already_read3'>
+    <view class="inform-title">
+      <text class="inform-title-3">{{activity_name}}</text>
+      <view class="inform-title-noread" wx:if="{{!already_read3}}">
+        <text>未读</text>
+      </view>
+    </view>
+    <view class="inform-time-container">
+      <text class="inform-time-tile">发布时间：</text>
+      <text class="inform-time-description">{{update_time}}</text>
+    </view>
+    <text class="inform-summarize">{{tools.sub(notification3)}}</text>
+  </view>
+
+</template>

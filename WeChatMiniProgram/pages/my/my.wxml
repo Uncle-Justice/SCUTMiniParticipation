@@ -1,0 +1,32 @@
+<view class="my-container">
+
+  <view class="green_background">
+    <view class="userinfo">
+
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='userinfo-button'> <text>显示头像与昵称</text> </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view>
+
+  <view class="backgound"></view>
+
+  <view class="fixed-view">
+    <!-- <view class="image-container"> -->
+    <view>
+      <image src="/imgs/manager_enter.png" bindtap='onManagerTap'></image>
+      <text>管理员入口</text>
+    </view>
+    <view>
+      <image src="/imgs/personal_info.png" bindtap='onAboutTap'></image>
+      <text>关于</text>
+    </view>
+    <view>
+      <image src="/imgs/service.png"></image>
+      <text>意见与建议</text>
+    </view>
+    <!-- </view> -->
+  </view>
+</view>

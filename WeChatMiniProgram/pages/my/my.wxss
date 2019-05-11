@@ -1,0 +1,92 @@
+.my-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; *//* justify-content: space-between; *//* padding: rpx 0; */
+  box-sizing: border-box;
+}
+
+.green_background {
+  /* background-color: #40de5a; */
+  background-color: #96ce54;
+  height: 380rpx;
+}
+
+.userinfo {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-button {
+  width: 40%;
+  margin-top: 80rpx;
+  background-color: #7bcfa6;
+  color: white;
+  border-radius: 48rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.userinfo-button text{
+  font-size:30rpx;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #f3f9f1;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.fixed-view {
+  top: 340rpx;
+  position: absolute;
+  width: 700rpx;
+  margin-left: 25rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 30rpx;
+}
+
+.fixed-view view {
+  width: 200rpx;
+  height: 180rpx;
+  margin-top: 20rpx;
+  margin-left: 25rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.fixed-view view image {
+  width: 100rpx;
+  height: 100rpx;
+  /* margin-left:10rpx; */
+}
+
+.fixed-view view text {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  font-family: Microsoft YaHei;
+  color: #3d3b4f;
+}
+
+.backgound {
+  height: 1100rpx;
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,158 @@
+<view class="my-container">
+
+  <view class="green_background">
+
+  </view>
+
+  <view class="backgound"></view>
+
+  <view class="fixed-view">
+
+    <view class="three-selection-container">
+      <view bindtap="powerDrawer" data-statu="open">
+        <image src="/imgs/manager_enter.png"></image>
+        <text>发布全体通知</text>
+      </view>
+      <view>
+        <image src="/imgs/manager_enter.png" bindtap="OnDownloadTap"></image>
+        <text>导出表格</text>
+      </view>
+      <view>
+        <image src=""></image>
+        <text>还未实现1</text>
+      </view>
+    </view>
+
+    <view class="three-selection-container">
+      <view bindtap="powerDrawer2" data-statu="open">
+        <image src="/imgs/personal_info.png"></image>
+        <text>一键筛选</text>
+      </view>
+      <view wx:if="{{isScreened==0}}" bindtap='OnPartial_informTap'>
+        <image src="/imgs/service_notselected.png"></image>
+        <text>部分通知1</text>
+      </view>
+      <view wx:if="{{isScreened==1}}" bindtap='OnPartial_informTap' data-statu="open">
+        <image src="/imgs/service.png"></image>
+        <text>部分通知1</text>
+      </view>
+
+      <view wx:if="{{isScreened==0}}" bindtap='OnPartial_informTap'>
+        <image src="/imgs/service_notselected.png"></image>
+        <text>部分通知2</text>
+      </view>
+      <view wx:if="{{isScreened==1}}" bindtap='OnPartial_informTap'>
+        <image src="/imgs/service.png"></image>
+        <text>部分通知2</text>
+      </view>
+    </view>
+
+
+  </view>
+</view>
+
+
+
+<!-- ———————————————————————————————————————————————————————————————————————————————————— -->
+<!-- 这是点击跳出页面之外的地方调用的函数 -->
+<view class="drawer_screen" bindtap="powerDrawer_outofwindow" data-statu="close" wx:if="{{showModalStatus}}">
+</view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+  <!--drawer content-->
+  <view class="drawer_title">
+    <text>发送给</text>
+    <text class='text-high'>“{{value.name}}”</text>
+    <text>全体报名人员的通知</text>
+  </view>
+
+  <view class="drawer_content">
+    <view class='son_view'>
+      <textarea name="user_inform" class="textarea-bg" value="{{(!value.detail1)?'':value.detail1}}" placeholder="请输入内容" bindinput="getDataBindTap" auto-height maxlength='-1' />
+    </view>
+  </view>
+
+  <button class="btn_ok" bindtap="OnPostInformTap" data-statu="close">确定</button>
+</view>
+
+
+
+
+<!-- ———————————————————————————————————————————————————————————————————————————————————————— -->
+
+<view class="drawer_screen" bindtap="powerDrawer_outofwindow2" data-statu="close" wx:if="{{showModalStatus2}}">
+</view>
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus2}}">
+
+  <view class="drawer_title">
+    <text>对</text>
+    <text class='text-high'>“{{value.name}}”</text>
+    <text>全体报名人员进行一键筛选</text>
+  </view>
+
+  <view class="screen_drawer_content">
+    <view class='screen_view'>
+      <text>请注意，一键筛选默认的筛选规则如下：</text>
+      <!-- <text>1.即将毕业的学长学姐优先 </text>
+      <text>2.先到先得（按报名时间顺序）</text> -->
+
+        <checkbox-group name=""  class="multiple-checkboxes">
+          <label class="single-checkbox">
+            <checkbox value="1"></checkbox>
+            <text style='font-size:30rpx'>1.即将毕业的学长学姐优先</text>
+          </label>
+          <label class="single-checkbox">
+            <checkbox value="1"></checkbox>
+            <text style='font-size:30rpx'>2.先到先得（按报名时间顺序）</text>
+          </label>
+        </checkbox-group>
+
+    </view>
+  </view>
+
+  <button class="btn_ok" bindtap="OnScreenConfirmTap" data-statu="close">一键筛选</button>
+</view>
+
+
+<!-- —————————————————————————————————————————————————————————————————————————————————————————————————— -->
+
+<view class="drawer_screen" bindtap="powerDrawer_outofwindow3" data-statu="close" wx:if="{{showModalStatus3}}">
+</view>
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus3}}">
+
+  <view class="drawer_title">
+    <text>对</text>
+    <text class='text-high'>“{{value.name}}”</text>
+    <text>部分通知</text>
+  </view>
+
+  <view class="drawer_content">
+    <view class='screen_view'>
+      <view class='partial_view'>
+        <text>对已录取者：</text>
+        <view>
+          <textarea name="user_inform" class="textarea-bg" value="{{(!value.detail2)?'':value.detail2}}" placeholder="请输入内容" bindinput="getDataBindTap2" auto-height maxlength='-1' />
+        </view>
+      </view>
+
+      <view class='partial_view'>
+        <text>对未录取者：</text>
+        <view>
+          <textarea name="user_inform" class="textarea-bg" value="{{(!value.detail3)?'':value.detail3}}" placeholder="请输入内容" bindinput="getDataBindTap3" auto-height maxlength='-1' />
+        </view>
+      </view>
+
+
+    </view>
+  </view>
+
+  <button class="btn_ok" bindtap="OnPartialConfirmTap" data-statu="close">确认发送</button>
+</view>
+
+<loading hidden="{{!loadingHidden}}">
+  加载中...
+</loading>

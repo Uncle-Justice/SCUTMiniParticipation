@@ -1,0 +1,82 @@
+.inform-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: #fff;
+  margin: 10rpx auto;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  width: 710rpx;
+  height: 150rpx;
+}
+
+.inform-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.inform-title-noread {
+  width: 75rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  background-color: #ff4777;
+  margin-left: 40%;
+}
+
+.inform-title-1 {
+  font-size: 40rpx;
+  color: #96ce54;
+  font-weight: bold;
+}
+
+.inform-title-2 {
+  font-size: 40rpx;
+  color: #ffc64b;
+  font-weight: bold;
+}
+
+.inform-title-3 {
+  font-size: 40rpx;
+  color: #1685a9;
+  font-weight: bold;
+}
+
+.inform-title-noread text {
+  margin-left: 3rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+inform-position-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.inform-position-tile {
+  font-size: 34rpx;
+  color: #808080;
+}
+
+.inform-position-description {
+  font-size: 34rpx;
+}
+
+inform-time-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.inform-time-tile {
+  font-size: 34rpx;
+  color: #808080;
+}
+
+.inform-time-description {
+  font-size: 34rpx;
+}
+
+.inform-summarize {
+  color: #808080;
+  font-size: 30rpx;
+}

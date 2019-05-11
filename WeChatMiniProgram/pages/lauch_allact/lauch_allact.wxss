@@ -1,0 +1,36 @@
+.lauch_act-image {
+  margin-top: 20rpx;
+  width: 700rpx;
+  height: 200rpx;
+  margin-left: 25rpx;
+  border-radius: 20rpx;
+}
+
+.lauch_vote-image {
+  margin-top: 20rpx;
+  width: 400rpx;
+  height: 200rpx;
+  margin-left: 25rpx;
+  border-radius: 20rpx;
+}
+
+.image-cotainer1{
+  display: flex;
+  flex-direction: row;
+  
+}
+.screen_and_inform-image {
+  margin-top: 20rpx;
+  width: 80%;
+  height: 200rpx;
+  margin-left: 25rpx;
+  border-radius: 20rpx;
+}
+
+.lauch_questionnaire-image {
+  margin-top: 20rpx;
+  width: 50%;
+  height: 200rpx;
+  margin-left: 25rpx;
+  border-radius: 20rpx;
+}

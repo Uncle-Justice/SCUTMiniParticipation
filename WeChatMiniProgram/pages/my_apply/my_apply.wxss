@@ -1,0 +1,45 @@
+@import "../tpls/my_apply-tpls/my_apply-tpl.wxss";
+
+.page {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.swiper-tab {
+  display: flex;
+  flex-direction: row;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.tab-item {
+  width: 50%;
+  text-align: center;
+  font-size: 15px;
+  color: #777777;
+}
+
+.my_apply-headerimg {
+  width:100%;
+  height:318rpx;
+}
+
+.swiper {
+  width:100%;
+  height: 100%;
+  background: #f2f2f2;
+}
+
+.on {
+  color: #96ce54;
+  border-bottom: 5rpx solid #40de5a;
+}
+
+.bottom-inform {
+  text-align: center;
+}
+
+.bottom-inform text {
+  color: #bacac6;
+  font-size: 26rpx;
+}

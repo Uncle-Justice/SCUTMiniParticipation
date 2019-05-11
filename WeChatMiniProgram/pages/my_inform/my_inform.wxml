@@ -1,0 +1,19 @@
+<import src="../tpls/my_inform-tpls/my_inform-tpl.wxml" />
+
+<image src="/imgs/my_inform.png" class="header_img" mode='widthFix'></image>
+
+<view class="background">
+  <block wx:key='' wx:for="{{inform_post}}" wx:for-item="item" wx:for-index="idx">
+    <template is="my_inform-tpl" data="{{...item}}" />
+  </block>
+</view>
+
+
+
+<view class='bottom-inform' wx:if="{{arr.length!=1}}">
+  <text>#往下已经没有更多了呢 ∑(ﾟДﾟノ)ノ</text>
+</view>
+
+<view class='bottom-inform' wx:if="{{arr.length==1}}">
+  <text>#亲还没有通知呢，快去参与活动吧∑(ﾟДﾟノ)ノ </text>
+</view>

@@ -1,0 +1,28 @@
+<import src="../tpls/post-tpls/post-tpl.wxml" />
+
+
+<view class="post-main-container">
+
+<view class='swiper-container'>
+  <swiper indicator-dots='true' autoplay='true' interval='4000'>
+    <block wx:key='1' wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="idx">
+      <swiper-item>
+        <image class='.post-head_img' src="{{item.image}}" mode='widthFix' catchtap="onPostTap" data-questionnaire="{{item.questionnaire}}" data-closed="{{item.questionnaire.closed}}" data-item='{{item}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+  <view>
+    <block wx:key='' wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="idx">
+      <view class="post-container" catchtap="onPostTap" data-questionnaire="{{item.questionnaire}}" data-closed="{{item.questionnaire.closed}}" data-item='{{item}}'>
+        <template is="post-tpl" data="{{...item}}" />
+      </view>
+    </block>
+
+  </view>
+</view>
+
+<view class='bottom-inform'>
+  <text>#往下已经没有更多了呢o(´^｀)o</text>
+</view>

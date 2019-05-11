@@ -1,0 +1,8 @@
+
+<image src="/imgs/lauch_act.png" mode='widefix' class="lauch_act-image" bindtap='OnLauch_act'></image>
+
+<view class='image-cotainer1'>
+<image src="/imgs/lauch_vote.png" class="lauch_vote-image"></image>
+<image src="/imgs/lauch_questionnaire.png" class="lauch_questionnaire-image"></image>
+</view>
+<image src="/imgs/screen_and_inform.png" class="screen_and_inform-image" bindtap='Onscreen_and_informTap'></image>

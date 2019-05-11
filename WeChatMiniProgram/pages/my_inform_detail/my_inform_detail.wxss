@@ -1,0 +1,130 @@
+.background {
+  /* background-color: #f2f2f2; */
+}
+
+.fixed-view {
+  width: 700rpx;
+  margin-left: 25rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  /* border-radius: 40rpx; */
+}
+
+.fixed-view view {
+  background-color: #fff;
+  /* margin-top: 20rpx; *//* border-radius: 40rpx; *//* border-bottom: 2px solid #ededed; */
+}
+
+.information_name text {
+  color: #96ce54;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 44rpx;
+  vertical-align: middle;
+  font-weight: bold;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.description_detail {
+  margin-top: 10rpx;
+  border-top: 2px dotted;
+  border-left: 2px dotted;
+  border-right: 2px dotted;
+  border-bottom: 2px dotted;
+  border-color: #00e09e;
+  width: 600rpx;
+  text-align: left;
+  padding-top: 10rpx;
+  padding-right: 10rpx;
+  padding-left: 30rpx;
+  padding-bottom: 10rpx;
+}
+
+.description_detail text {
+  width: 560rpx;
+  font-size: 30rpx;
+  color: #808080;
+  /* text-align: center; */
+}
+
+.time {
+  /* width: 600rpx; */
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28rpx;
+  /* border-top: 2px dotted; *//* border-color: #f2f2f2; */
+}
+
+.time image {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.time text {
+  /* width: 100rpx; */
+  margin-left: 20rpx;
+}
+
+
+.inform_confirmRadio{
+  margin-top:50rpx;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input {
+  margin-left: 20rpx;
+  border-radius: 50%; /* 圆角 */
+  width: 28rpx; /* 背景的宽 */
+  height: 28rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  border-radius: 50%;
+  width: 44rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #fff;
+    background: #7fecad;
+  border-color: #7fecad;
+}
+
+
+.Post_botton-unconfirm{
+  width: 80%;
+  height:92rpx;
+  margin-top: 20rpx;
+  background-color: #d3d3d3;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Post_botton-confirm{
+  width: 80%;
+  margin-top: 20rpx;
+  background-color: #7bcfa6;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.Post_botton-confirm::after {
+  border-radius: 98rpx;
+  border: 0; 
+}

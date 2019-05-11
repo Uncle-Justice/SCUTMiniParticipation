@@ -1,0 +1,49 @@
+<import src="../tpls/my_apply-tpls/my_apply-tpl.wxml" />
+
+<view class="page">
+
+
+  <view class="swiper">
+    <view>
+      <image src="/imgs/my_apply.png" class="my_apply-headerimg" mode="widefix"></image>
+    </view>
+    <block wx:key='' wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="idx">
+      <view class="post-container" catchtap="onPostTap" data-questionnaire="{{item}}">
+        <template is="my_apply-tpl" data="{{...item}}" />
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class='bottom-inform' wx:if="{{posts_key.length!=0}}">
+  <text>#往下已经没有更多了呢 (っ•̀ω•́)っ⁾⁾ </text>
+</view>
+
+<view class='bottom-inform' wx:if="{{posts_key.length==0}}">
+  <text>#亲还没有报名活动呢，快快去参与吧(っ•̀ω•́)っ⁾⁾ </text>
+</view>
+
+
+
+
+<!--顶部导航栏-->
+<!-- <view class="swiper-tab">
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">我参与的</view>
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">我收藏的</view> -->
+<!-- <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">我收藏的</view> -->
+<!-- </view> -->
+
+<!--内容主体-->
+<!-- <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    
+
+<!-- <swiper-item>
+      <view>
+
+        wosshizhu
+      </view>
+    </swiper-item> -->
+
+
+<!-- </swiper> -->
+<!-- </view> -->

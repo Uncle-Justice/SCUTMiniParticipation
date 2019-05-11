@@ -1,0 +1,2 @@
+<!--index.wxml-->
+<button type="primary" style="margin-bottom:20px;margin-top:30px" bindtap="getToken">申请令牌</button>

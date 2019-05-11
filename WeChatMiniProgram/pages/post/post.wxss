@@ -1,0 +1,28 @@
+/* pages/post/post.wxss */
+@import "../tpls/post-tpls/post-tpl.wxss";
+
+.swiper-container{
+  margin: 10rpx auto;
+  width: 730rpx;
+  height: 300rpx;
+}
+
+
+.post-head_img {
+  width: 100%;
+  border-radius: 20rpx;
+}
+
+.post-main-container {
+  background-color: #f2f2f2;
+  height: 100%;
+}
+
+.bottom-inform {
+  text-align: center;
+}
+
+.bottom-inform text {
+  color: #bacac6;
+  font-size: 26rpx;
+}

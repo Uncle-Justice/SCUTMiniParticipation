@@ -1,0 +1,39 @@
+<wxs src="../../../wxs/subutil.wxs" module="tools" />
+<template name='post-tpl'>
+
+
+  <view class='post-container'>
+
+    <!-- <view class='post-author-date'>
+        <image class="post-author" src="{{avatar}}" width="100%" mode='widthFix'></image>
+
+      </view> -->
+
+    <view class="post-pattern">
+      <image class='post-image' src="{{image}}" mode='aspectFill'></image>
+      <view class="post-pattern-text">
+        <text class='post-title'>{{name}}</text>
+        <text class='post-date' wx:if='{{questionnaire.closed==0}}'>可报名</text>
+        <text class='post-date' wx:if='{{questionnaire.closed==1}}'>已截止</text>
+        <text class='post-content'>{{tools.sub2(description)}}</text>
+        <!-- <view class='post-like'>
+          <image class='post-like-image' src="/imgs/chat.png" width="100%" mode='widthFix'></image>
+          <text class='post-like-font'>{{reading}}</text>
+          <image class='post-like-image' src="/imgs/view.png" width="100%" mode='widthFix'></image>
+          <text class='post-like-font'>{{collection}}</text>
+        </view> -->
+      </view>
+    </view>
+
+    <!-- <view class='post-like'>
+        <image class='post-like-image' src="/imgs/chat.png" width="100%" mode='widthFix'></image>
+        <text class='post-like-font'>{{reading}}</text>
+        <image class='post-like-image' src="/imgs/view.png" width="100%" mode='widthFix'></image>
+        <text class='post-like-font'>{{collection}}</text>
+      </view> -->
+
+
+  </view>
+
+
+</template>

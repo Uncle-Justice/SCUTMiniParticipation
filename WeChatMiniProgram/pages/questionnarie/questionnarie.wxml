@@ -1,0 +1,163 @@
+<image src="{{image}}" class="question-header_img" mode='aspectFill'></image>
+
+<view class="head-img-hover" >
+  <text class="main-title">{{act_name}}</text>
+  <text class="sub-title"></text>
+</view>
+
+<image src="{{image}}" class="header-img" mode='widthFix'></image>
+
+<view class='background'>
+  <view class="q-container">
+
+    <view class="fixed-view">
+
+      <view class="questionnaire_name">
+        <text>{{questionnaire.name}}</text>
+      </view>
+
+
+      <view class="description_detail">
+        <text>{{questionnaire.description}}</text>
+      </view>
+
+      <view class="time">
+        <image src="/imgs/time.png"></image>
+        <text>活动开始时间</text>
+        <view class="exact_time">
+          <text>{{questionnaire.create_time}}</text>
+        </view>
+      </view>
+      <view class="time">
+        <image src="/imgs/time.png"></image>
+        <text>活动结束时间</text>
+        <view class="exact_time">
+          <text>{{questionnaire.create_time}}</text>
+        </view>
+      </view>
+      <view class="time">
+        <image src="/imgs/time.png"></image>
+        <text>报名截止时间</text>
+        <view class="exact_time">
+          <text>{{questionnaire.create_time}}</text>
+        </view>
+      </view>
+
+    </view>
+
+
+    <form class="page_bd" catchsubmit="formSubmit" catchreset="formReset">
+
+
+      <view wx:if="{{questionnaire.user_name}}" class="question-input">
+        <view class="input_tile">
+          <text>你的姓名</text>
+          <text class="symbol_star">*</text>
+        </view>
+        <input name='name' placeholder="please input here">
+        </input>
+        <view class='border '></view>
+      </view>
+
+      <view wx:if="{{questionnaire.gender}}" class='question-input'>
+        <label class='input_tile' for='Sex'>
+          <text>你的性别</text>
+          <text class="symbol_star">*</text>
+        </label>
+        <radio-group name="gender" class="">
+          <label class="radio-label">
+            <radio value='男' class='radio'>
+              <text>男</text>
+            </radio>
+            <radio value='女' class='radio'>
+              <text>女</text>
+            </radio>
+          </label>
+        </radio-group>
+      </view>
+
+      <view wx:if="{{questionnaire.campus}}" class='question-input'>
+        <label class='input_tile' for='Sex'>
+          <text>你的校区</text>
+          <text class="symbol_star">*</text>
+        </label>
+        <radio-group name="campus" class="">
+          <label class="radio-label">
+            <radio value='大学城校区' class='radio'>
+              <text>大学城校区</text>
+            </radio>
+            <radio value='五山校区' class='radio'>
+              <text>五山校区</text>
+            </radio>
+          </label>
+        </radio-group>
+      </view>
+
+
+
+      <view wx:if="{{questionnaire.institute}}" class="question-input">
+        <view class="input_tile">
+          <text>你的学院</text>
+          <text class="symbol_star">*</text>
+        </view>
+        <input name='institute' placeholder="please input here">
+        </input>
+        <view class='border '></view>
+      </view>
+
+      <view wx:if="{{questionnaire.grade}}" class="question-input">
+        <view class="input_tile">
+          <text>你的年级</text>
+          <text class="symbol_star">*</text>
+        </view>
+        <input name='grade' placeholder="please input here">
+        </input>
+        <view class='border'></view>
+      </view>
+
+      <view wx:if="{{questionnaire.student_id}}" class="question-input">
+        <view class="input_tile">
+          <text>你的学号</text>
+          <text class="symbol_star">*</text>
+        </view>
+        <input name='student_id' placeholder="please input here">
+        </input>
+        <view class='border'></view>
+      </view>
+
+
+      <view wx:if="{{questionnaire.telephone}}" class="question-input">
+        <view class="input_tile">
+          <text>联系电话</text>
+          <text class="symbol_star">*</text>
+        </view>
+        <input name='telephone' placeholder="please input here">
+        </input>
+        <view class='border'></view>
+      </view>
+
+
+      <view wx:if="{{questionnaire.batch}}" class="question-checkbox">
+        <view class="input_tile">
+          <text>报名参加的批次</text>
+          <text class="symbol_star">*</text>
+        </view>
+        <checkbox-group name="batch_items" bindchange="checkboxChange" class="multiple-checkbox">
+          <label wx:for="{{questionnaire.batch_items}}" wx:if="{{item!=null}}" wx:key="" class="single-checkbox">
+            <checkbox value="{{item}}"></checkbox>
+            <text>{{item}}</text>
+
+          </label>
+        </checkbox-group>
+      </view>
+
+
+      <view class="btn-area">
+        <button formType="submit">提交</button>
+        <button formType="reset">重置</button>
+      </view>
+    </form>
+
+
+  </view>
+</view>

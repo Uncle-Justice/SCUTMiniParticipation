@@ -1,0 +1,173 @@
+<view class='background'>
+
+  <!-- <view class="imginfo">
+    <block wx:for="{{tempFilePaths}}" wx:key="{{index}}">
+      <image src="{{item}}" bindtap="listenerButtonPreviewImage" data-index="{{index}}" style="width: 100%;" />
+    </block>
+  </view> -->
+
+  <view class='cover-container'>
+    <view class='cover-container-image'>
+      <block wx:for="{{tempFilePaths}}" wx:key="{{index}}">
+        <image src="{{item}}" bindtap="listenerButtonPreviewImage" mode='aspectFill' />
+      </block>
+    </view>
+    <view class="cover-container-button">
+      <button class="cover-container-button-1" bindtap="upload">更换活动封面</button>
+    </view>
+  </view>
+
+
+
+  <form class="lauch_act_bd" catchsubmit="formSubmit" catchreset="formReset">
+
+    <view class="fixed-view">
+      <view class="projectTitle">活动名称</view>
+      <textarea name='projectTitle' placeholder="请输入活动名称">
+      </textarea>
+
+    </view>
+
+    <view class="fixed-view">
+      <view class="input_tile">活动简介</view>
+      <textarea name='projectIntro' placeholder="请输入活动简介">
+      </textarea>
+
+    </view>
+
+    <view class="fixed-view">
+      <view class="questionnaire_name">问卷名字</view>
+      <textarea name='questionnaire_name' placeholder="请输入问卷名字">
+      </textarea>
+
+    </view>
+
+    <view class="fixed-view">
+      <view class="questionnaire_des">活动详情</view>
+      <textarea name='questionnaire_des' placeholder="请输入活动详情" maxlength='-1'>
+      </textarea>
+
+
+    </view>
+
+    <!-- <view class="fixed-view-upload">
+      <view>活动图片</view>
+      <view class="userinfo">
+
+        <button bindtap="upload">上传原图</button>
+        <!-- <button bindtap="download"> 下载图片</button> -->
+    <!-- </view> -->
+    <!-- <view class="imginfo">
+        <block wx:for="{{tempFilePaths}}" wx:key="{{index}}">
+          <image src="{{item}}" bindtap="listenerButtonPreviewImage" data-index="{{index}}" style="width: 100%;" />
+        </block>
+      </view> -->
+    <!-- <block>
+          <image src='{{downloadPicturePath}}' bindtap='preview_download_picture'></image>
+        </block> -->
+
+    <!-- </view> -->
+
+
+    <view class="deadline-container">
+      <view class="deadline-title">截止时间:</view>
+
+      <view class="section">
+        <picker mode="date" value="{{date}}" start="{{date}}" end="2020-09-01" bindchange="bindDateChange">
+          <view class="picker">{{date}}</view>
+        </picker>
+      </view>
+
+      <view class="section">
+        <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+          <view class="picker"> {{time}}</view>
+        </picker>
+
+      </view>
+    </view>
+
+
+
+
+
+
+    <view class="required_options-container">
+      <text class="required_options_title">报名须填</text>
+      <view class="required_options">
+        <block wx:for="{{items}}" wx:for-item="item">
+          <view class="{{item.bool?'clicked':'notclicked'}}" catchtap='onItemTap' data-item="{{item.index}}">
+            <text>{{item.value}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class="required_options-container">
+      <block wx:for="{{special}}" wx:for-item="item">
+        <view class="{{item.bool?'clicked':'notclicked'}}" catchtap='onSpecialTap' data-item="{{item.index}}">
+          <text>{{item.value}}</text>
+        </view>
+      </block>
+    </view>
+
+
+
+    <view class='special-container' hidden='{{!special[0].bool}}'>
+      <view class='special-title'>
+        <text>选择批次个数: </text>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            <text style='color:#f00056'>    {{array[index]}}</text>
+          </view>
+        </picker>
+      </view>
+
+      <block wx:for="{{batch}}" wx:for-item="batch">
+        <view hidden='{{batch.hidden}}' class="special-content">
+
+          <input style='font-size:32rpx;width:57%;' name='inputbatch' placeholder="批次时间" data-index='{{index}}' bindinput='batchFill' value="{{batch.content}}"></input>
+
+          <input style='font-size:32rpx;' name='inputlimit' placeholder="人数限制（0为无限制）" data-index='{{index}}' bindinput='limitFill' value="{{batch.limit}}"></input>
+
+        </view>
+      </block>
+
+    </view>
+
+
+    <view class='special-container' hidden='{{!special[1].bool}}'>
+      <view class="special-title">
+        <text>选择问题个数: </text>
+        <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+          <view class="picker">
+            <text style='color:#f00056'>{{array1[index1]}}</text>
+          </view>
+        </picker>
+
+      </view>
+
+      <view class="fixed-view-speical">
+        <block wx:for="{{singleChoice}}" wx:for-item="singleChoice">
+          <view hidden='{{singleChoice.hidden}}'>
+            <input name='inputsingleChoice' placeholder="问题描述" data-index='{{index}}' bindinput='singleChoiceFill' value="{{singleChoice.content}}">
+            </input>
+          </view>
+        </block>
+      </view>
+    </view>
+
+
+
+    <view class="btn-area">
+      <view class='btn-1'>
+        <button formType="submit">发布活动</button>
+      </view>
+      <view class='btn'>
+        <button formType="reset">重置</button>
+      </view>
+    </view>
+
+
+  </form>
+
+</view>
